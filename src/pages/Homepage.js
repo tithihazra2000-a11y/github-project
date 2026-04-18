@@ -1,8 +1,8 @@
 // pages/HomePage.js
 import React, { useContext } from "react";
 import { AppContext } from "../App";
-import { ProjectCard } from "../components/SharedComponents";
-import PROJECTS from "../data/projects";
+import { ProjectCard } from "../src/components/SharedComponents";
+import PROJECTS from "../src/data/projects";
 
 const CATEGORIES = [
   { label: "Web Apps",   icon: "🌐" },

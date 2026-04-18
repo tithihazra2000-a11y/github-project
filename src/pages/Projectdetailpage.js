@@ -1,7 +1,7 @@
 // pages/ProjectDetailPage.js
 import React, { useContext } from "react";
 import { AppContext } from "../App";
-import PROJECTS from "../data/projects";
+import PROJECTS from "../src/data/projects";
 
 export default function ProjectDetailPage() {
   const { navigate, selectedProject, showToast } = useContext(AppContext);

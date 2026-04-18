@@ -1,7 +1,7 @@
 // pages/AdminPanel.js
 import React, { useState, useContext } from "react";
 import { AppContext } from "../App";
-import { StatusPill } from "../components/SharedComponents";
+import { StatusPill } from "../src/components/SharedComponents";
 
 const SIDEBAR = [
   { id: "overview",  icon: "📊", label: "Overview",     badge: null },

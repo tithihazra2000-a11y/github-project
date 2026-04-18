@@ -1,7 +1,7 @@
 // pages/BrowsePage.js
 import React, { useState } from "react";
-import { ProjectCard } from "../components/SharedComponents";
-import PROJECTS from "../data/projects";
+import { ProjectCard } from "../src/components/SharedComponents";
+import PROJECTS from "../src/data/projects";
 
 const CATEGORIES = ["", "Web Apps", "Mobile", "ML/AI", "Blockchain", "Final Year", "APIs"];
 

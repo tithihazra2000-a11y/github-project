@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+ 
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+:root {
+  --bg:      #0a0a0f;
+  --bg2:     #12121a;
+  --bg3:     #1a1a26;
+  --bg4:     #22222e;
+  --border:  #2e2e3e;
+  --border2: #3a3a4e;
+  --text:    #f0f0f8;
+  --text2:   #a0a0b8;
+  --text3:   #606078;
+  --accent:  #7c6cf8;
+  --accent2: #a594fa;
+  --green:   #22d3a0;
+  --amber:   #f5a623;
+  --red:     #f56060;
+  --pink:    #f06292;
+  --r:  10px;
+  --r2: 16px;
+  --font-head: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+ 
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.65;
+  min-height: 100vh;
+}
+ 
+a { color: var(--accent2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1,h2,h3,h4 { font-family: var(--font-head); font-weight: 700; }

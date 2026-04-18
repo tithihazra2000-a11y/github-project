@@ -1,0 +1,29 @@
+.wrap { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem 4rem; }
+.header { margin-bottom: 2rem; }
+.header h1 { font-size: 2rem; margin-bottom: .4rem; }
+.header p  { color: #a0a0b8; }
+
+.filterBar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.searchInput {
+  flex: 1; min-width: 220px;
+  background: #12121a; border: 1px solid #2e2e3e;
+  border-radius: 10px; padding: 10px 16px;
+  color: #f0f0f8; font-size: 14px; outline: none;
+}
+.searchInput:focus { border-color: #7c6cf8; }
+.select {
+  background: #12121a; border: 1px solid #2e2e3e;
+  border-radius: 10px; padding: 10px 14px;
+  color: #a0a0b8; font-size: 13px; outline: none; cursor: pointer;
+}
+.catTabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.catTab {
+  padding: 7px 16px; border-radius: 20px;
+  border: 1px solid #2e2e3e;
+  background: #12121a; color: #a0a0b8;
+  font-size: 13px; cursor: pointer; transition: all .15s;
+}
+.catActive { border-color: #7c6cf8; color: #a594fa; background: rgba(124,108,248,.08); }
+.resultsBar { font-size: 13px; color: #606078; margin-bottom: 1rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(270px,1fr)); gap: 16px; }
+.empty { color: #606078; padding: 3rem; text-align: center; grid-column: 1/-1; }

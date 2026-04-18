@@ -1,30 +1,66 @@
-'use client'
-import Link from 'next/link'
+// components/Navbar.js
+import React, { useContext } from "react";
+import { AppContext } from "../App";
 
-export default function Navbar() {
+export default function Navbar({ currentPage }) {
+  const { navigate } = useContext(AppContext);
+
   return (
     <nav style={{
-      background:'#12121a',
-      borderBottom:'1px solid #2e2e3e',
-      padding:'0 2rem',
-      height:'56px',
-      display:'flex',
-      alignItems:'center',
-      gap:'2rem',
-      position:'sticky',
-      top:0,
-      zIndex:200
+      background: "var(--bg)",
+      borderBottom: "1px solid var(--border)",
+      padding: "0 28px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      height: "56px",
+      position: "sticky",
+      top: 0,
+      zIndex: 100,
     }}>
-      <Link href="/" style={{color:'#a594fa', fontWeight:800, fontSize:'18px', textDecoration:'none'}}>
-        Dev<span style={{color:'#f0f0f8'}}>Market</span>
-      </Link>
-      <Link href="/browse" style={{color:'#a0a0b8', fontSize:'13px', textDecoration:'none'}}>Browse</Link>
-      <Link href="/sell" style={{color:'#a0a0b8', fontSize:'13px', textDecoration:'none'}}>Sell</Link>
-      <Link href="/about" style={{color:'#a0a0b8', fontSize:'13px', textDecoration:'none'}}>About</Link>
-      <div style={{marginLeft:'auto', display:'flex', gap:'8px'}}>
-        <Link href="/dashboard" style={{color:'#a0a0b8', fontSize:'13px', border:'1px solid #3a3a4e', padding:'6px 14px', borderRadius:'8px', textDecoration:'none'}}>Dashboard</Link>
-        <Link href="/sell" style={{background:'#7c6cf8', color:'#fff', fontSize:'13px', padding:'6px 14px', borderRadius:'8px', textDecoration:'none'}}>Start Selling</Link>
+      {/* Logo */}
+      <div
+        onClick={() => navigate("home")}
+        style={{ fontFamily: "var(--font-head)", fontWeight: 800, fontSize: "18px", cursor: "pointer", display: "flex", alignItems: "center", gap: "8px" }}
+      >
+        <span style={{ width: 8, height: 8, background: "var(--purple2)", borderRadius: "50%", display: "inline-block" }} />
+        GitMarket
+      </div>
+
+      {/* Nav Links */}
+      <div style={{ display: "flex", gap: "4px", alignItems: "center" }}>
+        {[
+          { label: "Browse",  page: "browse" },
+          { label: "Sell",    page: "seller" },
+          { label: "About",   page: "about"  },
+          { label: "Contact", page: "contact"},
+        ].map(({ label, page }) => (
+          <button
+            key={page}
+            className={`nav-link ${currentPage === page ? "active" : ""}`}
+            onClick={() => navigate(page)}
+            style={{
+              padding: "6px 14px",
+              borderRadius: "var(--radius-sm)",
+              color: currentPage === page ? "var(--purple3)" : "var(--text2)",
+              background: currentPage === page ? "rgba(124,58,237,0.12)" : "transparent",
+              cursor: "pointer",
+              fontSize: "13px",
+              border: "none",
+              fontFamily: "var(--font-body)",
+              transition: "all .18s",
+            }}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+
+      {/* Actions */}
+      <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+        <button className="btn btn-ghost btn-sm" onClick={() => navigate("user")}>My Orders</button>
+        <button className="btn btn-primary btn-sm" onClick={() => navigate("admin")}>Admin</button>
       </div>
     </nav>
-  )
+  );
 }

@@ -1,7 +1,7 @@
 // pages/SellerDashboard.js
 import React, { useState, useContext } from "react";
 import { AppContext } from "../App";
-import { StatusPill } from "../src/components/SharedComponents";
+import { StatusPill } from "../components/SharedComponents";
 
 const SIDEBAR = [
   { id: "overview",  icon: "📊", label: "Overview"        },

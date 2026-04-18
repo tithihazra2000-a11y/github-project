@@ -1,7 +1,7 @@
 // pages/CheckoutPage.js
 import React, { useState, useContext } from "react";
 import { AppContext } from "../App";
-import PROJECTS from "../src/data/projects";
+import PROJECTS from "../data/projects";
 
 const STEPS = ["Details", "Payment", "Download"];
 

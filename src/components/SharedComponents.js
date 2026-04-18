@@ -1,7 +1,8 @@
-// components/Footer.js
+// components/SharedComponents.js
 import React, { useContext } from "react";
 import { AppContext } from "../App";
 
+// ── Footer ──────────────────────────────────────────────
 export function Footer() {
   const { navigate } = useContext(AppContext);
   return (
@@ -20,10 +21,8 @@ export function Footer() {
     </footer>
   );
 }
-export default Footer;
 
-
-// components/Toast.js
+// ── Toast ────────────────────────────────────────────────
 export function Toast({ message }) {
   return (
     <div style={{
@@ -46,14 +45,9 @@ export function Toast({ message }) {
   );
 }
 
-
-// components/ProjectCard.js
-import React, { useContext } from "react";
-import { AppContext } from "../App";
-
+// ── ProjectCard ──────────────────────────────────────────
 export function ProjectCard({ project }) {
   const { navigate } = useContext(AppContext);
-
   return (
     <div className="card" onClick={() => navigate("detail", project)}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
@@ -69,16 +63,12 @@ export function ProjectCard({ project }) {
           <span className={`badge badge-${project.badge}`}>{project.badge.toUpperCase()}</span>
         )}
       </div>
-
       <div style={{ fontFamily: "var(--font-head)", fontWeight: 700, fontSize: "15px", marginBottom: "6px", lineHeight: 1.3 }}>
         {project.title}
       </div>
-
       <div style={{ color: "var(--text2)", fontSize: "13px", lineHeight: 1.6, marginBottom: "14px" }}>
         {project.desc}
       </div>
-
-      {/* Language dots */}
       <div style={{ display: "flex", gap: "4px", flexWrap: "wrap", marginBottom: "10px", alignItems: "center" }}>
         {project.langs.map((color, i) => (
           <React.Fragment key={i}>
@@ -87,7 +77,6 @@ export function ProjectCard({ project }) {
           </React.Fragment>
         ))}
       </div>
-
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <span style={{ fontFamily: "var(--font-head)", fontWeight: 700, fontSize: "17px", color: "var(--purple3)" }}>
           {project.price}
@@ -100,10 +89,8 @@ export function ProjectCard({ project }) {
     </div>
   );
 }
-export default ProjectCard;
 
-
-// components/StatusPill.js
+// ── StatusPill ───────────────────────────────────────────
 export function StatusPill({ status }) {
   return (
     <span className={`status-pill ${status}`}>

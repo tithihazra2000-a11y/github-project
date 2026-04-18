@@ -1,7 +1,7 @@
 {
   "name": "gitmarket",
   "version": "1.0.0",
-  "description": "GitHub Project Marketplace — Buy & Sell ready-made projects",
+  "description": "GitHub Project Marketplace",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
@@ -12,6 +12,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test"
+  },
+  "eslintConfig": {
+    "extends": ["react-app"]
   },
   "browserslist": {
     "production": [">0.2%", "not dead", "not op_mini all"],

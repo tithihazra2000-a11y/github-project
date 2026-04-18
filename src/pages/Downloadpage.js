@@ -1,7 +1,7 @@
 // pages/DownloadPage.js
 import React, { useContext } from "react";
 import { AppContext } from "../App";
-import PROJECTS from "../src/data/projects";
+import PROJECTS from "../data/projects";
 
 export default function DownloadPage() {
   const { navigate, selectedProject, showToast } = useContext(AppContext);

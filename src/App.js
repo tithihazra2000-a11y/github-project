@@ -2,20 +2,19 @@ import React, { useState } from "react";
 import "./styles/global.css";
 
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Toast from "./components/Toast";
+import { Footer, Toast } from "./components/SharedComponents";
 
-import HomePage from "../pages/HomePage";
-import BrowsePage from "../pages/BrowsePage";
-import ProjectDetailPage from "../pages/ProjectDetailPage";
-import CheckoutPage from "../pages/CheckoutPage";
-import DownloadPage from "../pages/DownloadPage";
-import SellerDashboard from "../pages/SellerDashboard";
-import UserDashboard from "../pages/UserDashboard";
-import AdminPanel from "../pages/AdminPanel";
-import AboutPage from "../pages/AboutPage";
-import ContactPage from "../pages/ContactPage";
-import LegalPage from "../pages/LegalPage";
+import HomePage from "./pages/HomePage";
+import BrowsePage from "./pages/BrowsePage";
+import ProjectDetailPage from "./pages/ProjectDetailPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import DownloadPage from "./pages/DownloadPage";
+import SellerDashboard from "./pages/SellerDashboard";
+import UserDashboard from "./pages/UserDashboard";
+import AdminPanel from "./pages/AdminPanel";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import LegalPage from "./pages/LegalPage";
 
 export const AppContext = React.createContext();
 
